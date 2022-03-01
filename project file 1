@@ -44,34 +44,44 @@ public class ExampleP {
 			//change text to fit parameters
 			//This shows different combinations of what customers could have inputted into the program for the grocery store. 
 			
-			//This choice shows that the customer does not have a membership and that 
-				if(test == 4 && money > 0 && membership == 0) {
+			//This choice shows that the customer selects to purchase item 1 (bread) and the customer does not have a membership.
+			
+				if(test == 1 && money > 0 && membership == 0) {
 					total= ((orderNumber * tax)+orderNumber);
 					 money = money - total;
 					System.out.println("you spent " + total + "and have " + money +"remaining");
 				}
-				else if(test == 4 && money > 0 && membership == 1) {
+			//This choice shows that the customer selects to purchase item 1 (bread) and the customer does have a membership. 
+			
+				else if(test == 1 && money > 0 && membership == 1) {
 					total= ((orderNumber * tax)+orderNumber);
 					 money = money - total;
 					System.out.println("would you like to sign up for a membership?");
 					
 				}
-				else if(test == 5 && money > 0 && membership == 1) {
+			//This choice shows that the customer selects to purchase item 2 (laundry detergent) and the customer does not have a membership.
+			
+				else if(test == 2 && money > 0 && membership == 0) {
 					total= ((order3 * tax)+order3);
 					 money = money - total;
 					System.out.println("you spent " + total + "and have " + money +"remaining");
 				}
-					
-				else if(test == 5 && money > 0 && membership == 0) {
+			//This choice shows that the customer selects to purchase item 2 (laundry detergent) and the customer does have a membership. 
+			
+				else if(test == 2 && money > 0 && membership == 1) {
 						total= ((order3 * tax)+order3);
 						 money = money - total;
 						System.out.println("you spent " + total + "and have " + money +"remaining");
 				}
+			//This choice shows that the customer selects to purchase item 3 (candy) and the customer does not have a membership. 
+			
 				else if(test == 3 && money > 0 && membership == 0) {
 					total= ((order4 * tax)+order4);
 					 money = money - total;
 					System.out.println("you spent " + total + "and have " + money +"remaining");
 				}
+			//This choice shows that the customer selects to purhase item 3 (candy) and the customer does have a membership. 
+			
 				else if(test == 3 && money > 0 && membership == 1) {
 					total= ((order4 * tax)+order4);
 					 money = money - total;
@@ -84,3 +94,6 @@ public class ExampleP {
 		
 		}
 }
+//In the end, the output of the customer's input would state the total amount of money that the customer has spent and the amount of money that the customer has left to spend. 
+//Again, the customer can stop at any time and they do not have to spend all of the money they used as an input in the system. 
+//
