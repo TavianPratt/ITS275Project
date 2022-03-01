@@ -1,10 +1,12 @@
 package project;
 import java.util.Scanner;
-
+//This project represents purchasing items from a store that will contribute to the total amount that a person spends. 
+//The person is also able to choose how much money they would like to spends. 
+//As the amount of money spent increases, then the membership will apply a discount to the purchase depending on how much is spent. 
 public class ExampleP {
 	public static void main(String[] args) {
 		Scanner keyboard = new Scanner(System.in);
-		
+		//These are the items that the consumer can select from to purchase and add to their cart.
 		double orderNumber;
 		double test = 1;
 		double money;
@@ -13,10 +15,13 @@ public class ExampleP {
 		order3 = 3;
 		double order4;
 		order4 = 10;
+		//Tax applied to total (sales tax) 
 		final double tax;
-		double total;
-		double membership;
 		tax = .07;
+		//Total output of the items that the person bought from the store.
+		double total;
+		//The membership discount is applied if the consumer has a membership with the grocery store and the discounts will be applied to the total. 
+		double membership;
 		// get users amount of money and membership status 
 		System.out.println("Enter the amount of money you want to spend");
 		money= keyboard.nextDouble();
