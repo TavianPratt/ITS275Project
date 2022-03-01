@@ -1,0 +1,120 @@
+package project;
+import java.util.Scanner;
+//This project represents purchasing items from a store that will contribute to the total amount that a person spends. 
+//The person is also able to choose how much money they would like to spends. 
+//As the amount of money spent increases, then the membership will apply a discount to the purchase depending on how much money the consumer spends. 
+public class ExampleP {
+	public static void main(String[] args) {
+		Scanner keyboard = new Scanner(System.in);
+		//These are the items that the consumer can select from to purchase and add to their cart.
+		double bread;
+		double test = 1;
+		double money;
+		bread = 5;
+		double detergent;
+		detergent = 10;
+		double candy;
+		candy = 3;
+		//Tax applied to total (sales tax) 
+		final double tax;
+		tax = .07;
+		//Total output of the items that the person bought from the store.
+		double total;
+		double total2;
+		//The membership discount is applied if the consumer has a membership with the grocery store and the discounts will be applied to the total. 
+		double membership;
+		double discount2;
+		final double discount;
+		discount=.05;
+		// Get consumers to log the amount of money they would like to spend at the grocery store as well as log their membership status if they have one.
+		
+		System.out.println("Enter the amount of money you want to spend");
+		money= keyboard.nextDouble();
+		System.out.println("For Yes enter 1 For No enter 0");
+		System.out.println("do you hav a memebership with us?");
+		membership= keyboard.nextDouble();
+		
+		//The while loop will continue to run until the amount of money remaining reaches 0 dollars or until the consumer wants to stop spending
+		//money at the grocery store.
+		//This is where the consumer would input their money amount that they would like to spend at the grocery store as well as whether they have a membership or not.
+		
+		while(money > 0 && test != 0) {
+
+			//System.out.println("Would you like to sign up for a membership?");
+			//membership= keyboard.nextDouble();
+			System.out.println("The items availbale are Bread, Laundry Detergent or Candy");
+			System.out.println("For Bread enter 1 For Laundry Detergent 2 For Candy 3");
+			System.out.println("enter the item you would like to purchase exactly:");
+			test = keyboard.nextDouble();
+		
+			//change text to fit parameters
+			//This shows different combinations of what customers could have inputed into the program for the grocery store. 
+			
+			//This choice shows that the customer selects to purchase item 1 (bread) and the customer does not have a membership.
+			
+				if(test == 1 && money > 0 && membership == 0) {
+					total= ((bread * tax)+bread);
+					 money = money - total;
+					System.out.println("you spent " + total + "and have " + money +"remaining");
+				}
+			//This choice shows that the customer selects to purchase item 1 (bread) and the customer does have a membership. 
+			
+				else if(test == 1 && money > 0 && membership == 1) {
+					total= ((bread * tax)+bread);
+					total2=(total-(total*discount));
+					discount2 = (total*discount);
+					 money = money - total2;
+					 System.out.println("you spent " + total2 + "and have " + money +"remaining");
+					 System.out.println("For being a member you saved  "+ discount2+"!");
+					
+				}
+			//This choice shows that the customer selects to purchase item 2 (laundry detergent) and the customer does not have a membership.
+			
+				else if(test == 2 && money > 0 && membership == 0) {
+					total= ((detergent * tax)+detergent);
+					 money = money - total;
+					System.out.println("you spent " + total + "and have " + money +"remaining");
+				}
+			//This choice shows that the customer selects to purchase item 2 (laundry detergent) and the customer does have a membership. 
+			
+				else if(test == 2 && money > 0 && membership == 1) {
+						total= ((detergent * tax)+detergent);
+						total2=(total-(total*discount));
+						discount2 = (total*discount);
+						 money = money - total2;
+						System.out.println("you spent " + total2 + "and have " + money +"remaining");
+						System.out.println("For being a member you saved  "+ discount2+"!");
+				}
+			//This choice shows that the customer selects to purchase item 3 (candy) and the customer does not have a membership. 
+			
+				else if(test == 3 && money > 0 && membership == 0) {
+					total= ((candy * tax)+candy);
+					 money = money - total;
+					System.out.println("you spent " + total + "and have " + money +"remaining");
+				}
+			//This choice shows that the customer selects to purchase item 3 (candy) and the customer does have a membership. 
+			
+				else if(test == 3 && money > 0 && membership == 1) {
+					total= ((candy * tax)+candy);
+					total2=(total-(total*discount));
+					discount2 = (total*discount);
+					 money = money - total2;
+					System.out.println("you spent " + total2 + "and have " + money +"remaining");
+					System.out.println("For being a member you saved  "+ discount2+"!");
+				}
+				else {
+					System.out.println("you have $" + money +" remaining");
+					System.out.println("Thank you for shopping with us ");
+			
+				
+				}
+			}
+			
+			
+		}
+}
+//In the end, the output of the customer's input would state the total amount of money that the customer has spent and the amount of money that the customer has left to spend. 
+//Again, the customer can stop at any time and they do not have to spend all of the money they used as an input in the system. 
+//Once the customer decides to stop spending money or runs out of money, then the program will say, 'Thank you for shopping with us and please come again'.
+
+//This project was created based on the notes that were reviewed in class.
