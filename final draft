@@ -28,7 +28,7 @@ public class ExampleP {
 		discount=.05;
 		// Get consumers to log the amount of money they would like to spend at the grocery store as well as log their membership status if they have one.
 		
-		System.out.println("Enter the amount of money you want to spend");
+		System.out.println("Enter the amount of money you would like to apply to your card");
 		money= keyboard.nextDouble();
 		System.out.println("For Yes enter 1 For No enter 0");
 		System.out.println("do you hav a memebership with us?");
@@ -102,6 +102,8 @@ public class ExampleP {
 					System.out.println("you spent " + total2 + "and have " + money +"remaining");
 					System.out.println("For being a member you saved  "+ discount2+"!");
 				}
+				// this condition closes the loop when one of the conditions is not met.
+				// It will then read out how much money the user has remaining 
 				else {
 					System.out.println("you have $" + money +" remaining");
 					System.out.println("Thank you for shopping with us ");
