@@ -2,7 +2,7 @@ package project;
 import java.util.Scanner;
 //This project represents purchasing items from a store that will contribute to the total amount that a person spends. 
 //The person is also able to choose how much money they would like to spends. 
-//As the amount of money spent increases, then the membership will apply a discount to the purchase depending on how much is spent. 
+//As the amount of money spent increases, then the membership will apply a discount to the purchase depending on how much money the consumer spends. 
 public class ExampleP {
 	public static void main(String[] args) {
 		Scanner keyboard = new Scanner(System.in);
@@ -22,12 +22,12 @@ public class ExampleP {
 		double total;
 		//The membership discount is applied if the consumer has a membership with the grocery store and the discounts will be applied to the total. 
 		double membership;
-		// get users amount of money and membership status 
+		// Get consumers to log the amount of money they would like to spend at the grocery store as well as log their membership status if they have one.
 		System.out.println("Enter the amount of money you want to spend");
 		money= keyboard.nextDouble();
 		System.out.println("Would you like to sign up for a membership?");
 		membership= keyboard.nextDouble();
-		
+		//The while loop will work until the total money remainder reaches 0 dollars or until the consumer wants to stop spending money at the grocery store. 
 		while(money > 0 && test != 0) {
 
 			//System.out.println("Would you like to sign up for a membership?");
