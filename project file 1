@@ -23,11 +23,16 @@ public class ExampleP {
 		//The membership discount is applied if the consumer has a membership with the grocery store and the discounts will be applied to the total. 
 		double membership;
 		// Get consumers to log the amount of money they would like to spend at the grocery store as well as log their membership status if they have one.
+		
 		System.out.println("Enter the amount of money you want to spend");
 		money= keyboard.nextDouble();
 		System.out.println("Would you like to sign up for a membership?");
 		membership= keyboard.nextDouble();
-		//The while loop will work until the total money remainder reaches 0 dollars or until the consumer wants to stop spending money at the grocery store. 
+		
+		//The while loop will continue to run until the amount of money remaining reaches 0 dollars or until the consumer wants to stop spending
+		//money at the grocery store.
+		//This is where the consumer would input their money amount that they would like to spend at the grocery store as well as whether they have a membership or not.
+		
 		while(money > 0 && test != 0) {
 
 			//System.out.println("Would you like to sign up for a membership?");
@@ -37,6 +42,9 @@ public class ExampleP {
 			test = keyboard.nextDouble();
 		
 			//change text to fit parameters
+			//This shows different combinations of what customers could have inputted into the program for the grocery store. 
+			
+			//This choice shows that the customer does not have a membership and that 
 				if(test == 4 && money > 0 && membership == 0) {
 					total= ((orderNumber * tax)+orderNumber);
 					 money = money - total;
