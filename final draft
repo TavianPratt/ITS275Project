@@ -31,7 +31,7 @@ public class ExampleP {
 		System.out.println("Enter the amount of money you would like to apply to your card");
 		money= keyboard.nextDouble();
 		System.out.println("For Yes enter 1 For No enter 0");
-		System.out.println("do you hav a memebership with us?");
+		System.out.println("do you hav a membership with us?");
 		membership= keyboard.nextDouble();
 		
 		//The while loop will continue to run until the amount of money remaining reaches 0 dollars or until the consumer wants to stop spending
