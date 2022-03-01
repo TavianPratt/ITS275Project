@@ -96,4 +96,4 @@ public class ExampleP {
 }
 //In the end, the output of the customer's input would state the total amount of money that the customer has spent and the amount of money that the customer has left to spend. 
 //Again, the customer can stop at any time and they do not have to spend all of the money they used as an input in the system. 
-//
+//Once the customer decides to stop spending money or runs out of money, then the program will say, 'Thank you for shopping with us and please come again'.
