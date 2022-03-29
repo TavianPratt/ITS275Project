@@ -92,21 +92,34 @@ public class sundayTest {
 
 		
 		
-		System.out.println("enter test number :");
+		System.out.println("Enter where you would like to go:");
 		test = keyboard.nextDouble();
 	
 		
 		
 			if(test == 1 ) {
-								System.out.println("you chose option 1");
-								two();
+			System.out.println("You chose option 1");
+			two();
 			}
 		
 		
-		    else {
+		    else if(test == 2) {
 				
-				System.out.println("you chose option 2");
-				one();
+		System.out.println("You chose option 2");
+		one();
+		
+		else if(test == 3) {
+		
+		System.out.println("You chose option 3");
+		
+		else if(test == 4) {
+		System.out.println("You chose option 4");
+		
+		else if(test == 5) {
+		System.out.println("You chose option 5");
+		
+		else if(test == 6) {
+		System.out.println("You chose option 6");
 		    
 	}
 	}
