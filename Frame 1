@@ -1,0 +1,115 @@
+package project;
+import java.util.Scanner;
+
+public class sundayTest {
+	
+	static void one(){
+		System.out.println("testing method working 1");
+		double test;
+		test = 10; 
+		
+		System.out.println("testing method working 1");
+		while( test != 0) {
+			Scanner keyboard = new Scanner(System.in);
+
+			
+			System.out.println("enter test number :");
+			test = keyboard.nextDouble();
+		
+			
+				if(test == 1 ) {
+									
+				}
+			
+			    else {
+					
+			    }
+		}
+	}
+	
+	static void two(){
+		System.out.println("testing method working1 ");
+		double test;
+		test = 10; 
+		
+		System.out.println("testing method working 1");
+		while( test != 0) {
+			Scanner keyboard = new Scanner(System.in);
+
+			
+			System.out.println("enter test number :");
+			test = keyboard.nextDouble();
+		
+			
+				if(test == 1 ) {
+									
+				}
+			
+			    else {
+					
+			    }
+		}
+
+	}
+	static void three(){
+		double test;
+		test = 10; 
+		
+		System.out.println("testing method working 1");
+		while( test != 0) {
+			Scanner keyboard = new Scanner(System.in);
+
+			
+			System.out.println("enter test number :");
+			test = keyboard.nextDouble();
+		
+			
+				if(test == 1 ) {
+									
+				}
+			
+			    else {
+					
+			    }
+		}
+
+	}
+	{
+}
+	public static void main(String[] args) {
+
+		
+	
+
+	
+	
+	double test;
+	test = 10; 
+	
+	
+	while( test != 0) {
+		Scanner keyboard = new Scanner(System.in);
+
+		
+		
+		System.out.println("enter test number :");
+		test = keyboard.nextDouble();
+	
+		
+		
+			if(test == 1 ) {
+								System.out.println("you chose option 1");
+								two();
+			}
+		
+		
+		    else {
+				
+				System.out.println("you chose option 2");
+				one();
+		    
+	}
+	}
+	}
+		
+}
