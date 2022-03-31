@@ -3,7 +3,8 @@ import java.util.Scanner;
 
 //This is the first store that will be available for people to look into for items.//
 // The first store is a class of its own within the main class page.//
-// The first store will have the person's name as part of its information.The other classes will also have this information. The person's name comes from the main class in the program.//
+// The first store will have the person's name as part of its information.The other classes will also have this information.//
+//The person's name comes from the main class in the program.//
 public class Store1 {
 	public String name;
 	public int price;
@@ -21,7 +22,8 @@ public class Store1 {
 	static double test;
 static Scanner keyboard = new Scanner(System.in);
 	public static void item() {
-//This is the list of the items that will be available for purchase. The list of items varies at each store. Water and Bread will be items available at store1, store2, and store3.//		
+//This is the list of the items that will be available for purchase.//
+//The list of items varies at each store. Water and bread will be items available at store1, store2, and store3.//		
 		double total;
 		double bread = 5;
 		double money = 20;
