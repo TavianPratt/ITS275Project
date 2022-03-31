@@ -20,10 +20,10 @@ static Scanner keyboard = new Scanner(System.in);
 		
 		double total;
 		double bread = 1.29;
-    double water = 1.65;
-    double eggs = 1.32;
-    double ice cream = 3.84;
-    double laundry detergent = 9.57;
+    		double water = 1.65;
+   	 	double eggs = 1.32;
+    		double ice cream = 3.84;
+    		double laundry detergent = 9.57;
 		double money = 20;
 		double tax=.07;
 		double test;
