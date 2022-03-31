@@ -5,46 +5,40 @@ import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) {
+		selection();
+		}
+public static void selection() {
 	Store1 f = new Store1("walmart", 15, "yes");
 	Store2 g = new Store2("target", 20, "yes");
-
-	//f.speak();
-	//f.item();
-	//f.item1();
-	
-	//g.speak();
-	//g.item();
-	
-	//customer will put in their yearly earnings and determine the best price location 
 	double test;
 	test = 10; 
-	
 	
 	while( test != 0) {
 		Scanner keyboard = new Scanner(System.in);
 
 		
 		
-		System.out.println("enter test number :");
+		System.out.println("pick the store you would like to purchase from");
+		System.out.println("walmart would be 1 and target would be 2.");
 		test = keyboard.nextDouble();
 	
 		
 		
 			if(test == 1 ) {
-								System.out.println("you chose option 1");
-								f.item();
-			}
-		
-		
-			else if(test == 2); {
-				
-				g.speak();
-				g.item();
+				System.out.println("you chose option 1");
+				f.flag();
 				break;
 			}
-
+			else if(test == 2); {
+				
+				g.flag();
+				break;
+			}
+						
 	}
+}
+	
+	
 
-	}
 
 }
