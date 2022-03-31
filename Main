@@ -1,0 +1,50 @@
+package project;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+	Store1 f = new Store1("walmart", 15, "yes");
+	Store2 g = new Store2("target", 20, "yes");
+
+	//f.speak();
+	//f.item();
+	//f.item1();
+	
+	//g.speak();
+	//g.item();
+	
+	//customer will put in their yearly earnings and determine the best price location 
+	double test;
+	test = 10; 
+	
+	
+	while( test != 0) {
+		Scanner keyboard = new Scanner(System.in);
+
+		
+		
+		System.out.println("enter test number :");
+		test = keyboard.nextDouble();
+	
+		
+		
+			if(test == 1 ) {
+								System.out.println("you chose option 1");
+								f.item();
+			}
+		
+		
+			else if(test == 2); {
+				
+				g.speak();
+				g.item();
+				break;
+			}
+
+	}
+
+	}
+
+}
