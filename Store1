@@ -1,22 +1,27 @@
 package project;
 import java.util.Scanner;
 
-
+//This is the first store that will be available for people to look into for items.//
+// The first store is a class of its own within the main class page.//
+// The first store will have the person's name as part of its information.The other classes will also have this information. The person's name comes from the main class in the program.//
 public class Store1 {
 	public String name;
 	public int price;
-	
+//Store1 will contain the name of the store that a person is shopping at.//
+//Remove the int price and string discount//
 	public Store1(String name, int price, String discount) {
 		this.name = name;
 		this.price = price;
 	}
+//This will print the name of the store on the program.//
+//Remove the price//
 	public void speak() {
 		System.out.println("store name" + name + "price" + price);
 	}
 	static double test;
 static Scanner keyboard = new Scanner(System.in);
 	public static void item() {
-		
+//This is the list of the items that will be available for purchase. The list of items varies at each store. Water and Bread will be items available at store1, store2, and store3.//		
 		double total;
 		double bread = 5;
 		double money = 20;
@@ -24,7 +29,10 @@ static Scanner keyboard = new Scanner(System.in);
 		double test;
 		test = 10; 
 		
-		
+//The person will be asked to insert a value that will correspond to the item that it is assigned to within the specific store that they are shopping at.//
+//This is within a while loop and the program will continue to run until the person is done shopping when typing in 0.//
+//The while loop will also end when the person runs out of money to spend.//
+
 		System.out.println("testing method working 1");
 		while( test != 0) {
 			Scanner keyboard = new Scanner(System.in);
@@ -33,24 +41,31 @@ static Scanner keyboard = new Scanner(System.in);
 			System.out.println("enter test number :");
 			test = keyboard.nextDouble();
 		
-			
+//This is how the price would be calculated if the person were to purchase item 1 which is bread.//
+//The price of bread in an assignment variable is multiplied by the tax variable and the tax will be added to the initial price of bread.//
+//The money total that the person said they would be willing to spend will be subtracted from the item they bought from the store.//
+//Once the calculations are done, the program will tell the person how much they spent and how much money they have left.//
 				if(test == 1 ) {
 					total= ((bread * tax)+bread);
 					 money = money - total;
 					System.out.println("you spent " + total + "and have " + money +"remaining");				
 				}
-			
+//Stops the program from looping.//			
 			    else {
 					break;
 			    }
 		}
 	
 	}
-	
+//Asking which item the person would like to purchase.//
+//The flag() method checks the item list to make sure the item is available to purchase.//
 	public static void flag(){
 		System.out.println("please select which item you would like to purchase");
 		int item;
 		item = keyboard.nextInt();
+//The item values are listed below and the item values also correspond with each item.//
+//If the value a person inputs is not within the item list, then the program will tell the person that the item is not available.//
+//If the value a person inputs is within the item list, then the program will tell the person that the item is available.//
 	
 		int x;
 		
