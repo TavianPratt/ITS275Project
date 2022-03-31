@@ -52,6 +52,7 @@ static Scanner keyboard = new Scanner(System.in);
 	
 	}
 public static void flag(){
+		System.out.println("These are the values available for purchase. Please input a value for the item that you would like to buy. Water= 1,Bread= 2,Eggs= 5,Ice Cream= 6, Laundry Detergent= 7."); 
 		System.out.println("please select which item you would like to purchase");
 		int item;
 		item = keyboard.nextInt();
