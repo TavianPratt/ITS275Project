@@ -46,14 +46,49 @@ static Scanner keyboard = new Scanner(System.in);
 		}
 	
 	}
-	public static void item1() {
-		String[] tester = {"one","two"};
-		String x = tester[1];
-		
-		System.out.println(x);
-	}
 	
+	public static void flag(){
+		System.out.println("please select which item you would like to purchase");
+		int item;
+		item = keyboard.nextInt();
+	
+		int x;
 		
-
+		x=item;
+		
+		int [] product = {1,2,3,5};
+		int result;
+		 result= sequentialSearch(product, x);
+		 if (result == -1) {
+			 System.out.println("that item is not available");
+			 
+		 }
+		 else {
+			 System.out.println("that item is available for purchase");
+		 }
+	}
+	private static int sequentialSearch(int[] product, int i) {
+		// TODO Auto-generated method stub
+		int index;
+		int element;
+		boolean found;
+		index = 0;
+		
+		element = -1;
+		found = false;
+		
+		while (!found && index < product.length)
+		{
+			if (product[index] == i) {
+				found = true;
+				element = index;
+			}
+			index ++;
+		
+		}
+			
+				return element;
+		
+	}
 }
 
