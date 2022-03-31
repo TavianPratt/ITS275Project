@@ -1,46 +1,35 @@
 package project;
 
 import java.util.Scanner;
-//This is the main class in the program.
 
 public class Main {
-//f and g variables that are inserted into the program when the program asks the person what store they would like to purchase items from.
-//f would be Walmart and g would be Target.
 
 	public static void main(String[] args) {
 		selection();
 		}
 public static void selection() {
-	Store1 f = new Store1("walmart", 15, "yes");
-	Store2 g = new Store2("target", 20, "yes");
+	Store1 f = new Store1("walmart","$");
+	Store2 g = new Store2("target","$$");
+	
 	double test;
 	test = 10; 
 	
-//The while loop will run if the value of test is a value other than 0.
-
 	while( test != 0) {
 		Scanner keyboard = new Scanner(System.in);
 
 		
-//The program will ask what store the person would like to shop from.
-//The person would input 1 or 2.
-//Option 1 would be Walmart and Option 2 would be Target.
-
+		
 		System.out.println("pick the store you would like to purchase from");
 		System.out.println("walmart would be 1 and target would be 2.");
 		test = keyboard.nextDouble();
 	
 		
-//If the person chooses to shop from Walmart then the program will continue to run and go to the Store1 class program.
-//From the Store1 class program, the program will list out the items that are available for purchase and the person will shop with the items that are listed specifically under Walmart.
+		
 			if(test == 1 ) {
 				System.out.println("you chose option 1");
 				f.flag();
 				break;
 			}
-////If the person chooses to shop from Target then the program will continue to run and go to the Store2 class program.
-//From the Store2 class program, the program will list out the items that are available for purchase and the person will shop with the items that are listed specifically under Target.
-
 			else if(test == 2); {
 				
 				g.flag();
