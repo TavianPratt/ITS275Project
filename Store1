@@ -47,6 +47,8 @@ static Scanner keyboard = new Scanner(System.in);
 //The price of bread in an assignment variable is multiplied by the tax variable and the tax will be added to the initial price of bread.//
 //The money total that the person said they would be willing to spend will be subtracted from the item they bought from the store.//
 //Once the calculations are done, the program will tell the person how much they spent and how much money they have left.//
+
+//Add: If test == 2) {    //
 				if(test == 1 ) {
 					total= ((bread * tax)+bread);
 					 money = money - total;
