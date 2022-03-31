@@ -2,4 +2,61 @@ package project;
 
 public class Store3 {
 
+
+
+package project;
+import java.util.Scanner;
+	
+	public Store3(String name, int price, String discount) {
+		this.name = name;
+		this.price = price;
+	}
+	public void speak() {
+		System.out.println("store name" + name + "price" + price);
+	}
+	static double test;
+static Scanner keyboard = new Scanner(System.in);
+	public static void item() {
+		
+		double total;
+		double bread = 1.29;
+    double water = 1.65;
+    double eggs = 1.32;
+    double ice cream = 3.84;
+    double laundry detergent = 9.57;
+		double money = 20;
+		double tax=.07;
+		double test;
+		test = 10; 
+		
+		
+		System.out.println("testing method working 1");
+		while( test != 0) {
+			Scanner keyboard = new Scanner(System.in);
+
+			
+			System.out.println("enter test number :");
+			test = keyboard.nextDouble();
+		
+			
+				if(test == 1 ) {
+					total= ((bread * tax)+bread);
+					 money = money - total;
+					System.out.println("you spent " + total + "and have " + money +"remaining");				
+				}
+			
+			    else {
+					break;
+			    }
+		}
+	
+	}
+
+		
+
+	}
+	
+		
+
+}
 }
