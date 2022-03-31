@@ -1,5 +1,55 @@
 package project;
 
 public class Store2 {
+public String name;
+	public int price;
+	
+	public Store2 (String name, int price, String discount) {
+		this.name = name;
+		this.price = price;
+	}
+	public void speak() {
+		System.out.println("store name" + name + "price" + price);
+	}
+	static double test;
+static Scanner keyboard = new Scanner(System.in);
+	public static void item() {
+		
+		double total;
+		double chips = 3;
+		double papertowels = 15;
+		double water = 4.75; 
+		double bread = 2.99; 
+		double tax=.07;
+		double test;
+		test = 10; 
+		
+		
+		System.out.println("testing method working 1");
+		while( test != 0) {
+			Scanner keyboard = new Scanner(System.in);
+
+			
+			System.out.println("enter test number :");
+			test = keyboard.nextDouble();
+		
+			
+				if(test == 1 ) {
+					total= ((bread * tax)+bread);
+					 money = money - total;
+					System.out.println("you spent " + total + "and have " + money +"remaining");				
+				}
+			
+			    else {
+					break;
+			    }
+		}
+	
+	}
+	
+	
+	
+		
 
 }
+
