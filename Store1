@@ -30,8 +30,8 @@ static Scanner keyboard = new Scanner(System.in);
 		//The list of items varies at each store. Water and bread will be items available at store1, store2, and store3.
 		
 		double total;
-		double soap;
-		double tp; 
+		double soap = 3.25;
+		double tp = 4.25; 
 		double water = 1.70;
 		double bread = 1.59;
 		double money = 20;
@@ -41,11 +41,11 @@ static Scanner keyboard = new Scanner(System.in);
 		//The person will be asked to insert a value that will correspond to the item that it is assigned to within the specific store that they are shopping at.
 		//This is within a while loop and the program will continue to run until the person is done shopping when typing in 0.
 		//The while loop will also end when the person runs out of money to spend.
-		
+		System.out.println("enter the amount of money you would like to add to your account: ");
+		money= keyboard.nextDouble();
 		//System.out.println("testing method working 1");
 		while( test != 0) {
 			Scanner keyboard = new Scanner(System.in);
-
 			
 			System.out.println("enter the item number you would like to purchase :");
 			test = keyboard.nextDouble();
@@ -60,7 +60,8 @@ static Scanner keyboard = new Scanner(System.in);
 					total= ((bread * tax)+bread);
 					 money = money - total;
 					 System.out.println("you purchased a loaf of bread");
-					System.out.println("you spent " + total + "and have " + money +"remaining");				
+					 // change values to only print two decimal places
+					System.out.println( "you spent " + total + "and have " + money +"remaining");				
 				}
 				else if(test == 2 ) {
 					total= ((water * tax)+ water);
@@ -68,8 +69,23 @@ static Scanner keyboard = new Scanner(System.in);
 					System.out.println("ypu purchased water");
 					System.out.println("you spent " + total + "and have " + money +"remaining");
 				}
+				
+				else if(test == 9 ) {
+					total= ((soap * tax)+ soap);
+					money=money-total;
+					System.out.println("ypu purchased water");
+					System.out.println("you spent " + total + "and have " + money +"remaining");
+				}
+				
+				else if(test == 8 ) {
+					total= ((tp * tax)+ tp);
+					money=money-total;
+					System.out.println("you purchased water");
+					System.out.println("you spent " + total + "and have " + money +"remaining");
+				}
 			
 			    else {
+			    	
 					break;
 			    }
 		}
@@ -96,9 +112,10 @@ static Scanner keyboard = new Scanner(System.in);
 		
 		int [] product = {1,2,8,9};
 		int result;
-		 result= Search(product, x);
+		 result= search(product, x);
 		 if (result == -1) {
-			 System.out.println("that item is not available");
+			 System.out.println("that item is out of stock and is not available to purchase. ");
+
 			 
 		 }
 		 else {
@@ -107,7 +124,7 @@ static Scanner keyboard = new Scanner(System.in);
 		 }
 	
 }
-	private static int Search(int[] product, int i) {
+	private static int search(int[] product, int i) {
 		// TODO Auto-generated method stub
 		int index;
 		int element;
@@ -131,4 +148,3 @@ static Scanner keyboard = new Scanner(System.in);
 		
 	}
 }
-
