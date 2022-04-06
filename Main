@@ -5,38 +5,85 @@ import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) {
-		selection();
+		priceRange();
 		}
 public static void selection() {
 	Store1 f = new Store1("walmart","$");
 	Store2 g = new Store2("target","$$");
 	
-	double test;
-	test = 10; 
+	String test;
+	int score = 9;
+	//test = 10; 
 	
-	while( test != 0) {
+	while( score != 0) {
 		Scanner keyboard = new Scanner(System.in);
 
 		
 		
 		System.out.println("pick the store you would like to purchase from");
 		System.out.println("walmart would be 1 and target would be 2.");
-		test = keyboard.nextDouble();
-	
+		test = keyboard.nextLine();
 		
-		
-			if(test == 1 ) {
-				System.out.println("you chose option 1");
+		switch (test ) {
+			case "walmart" :
+				System.out.println("test 1");
 				f.flag();
+				score= score-9;
 				break;
-			}
-			else if(test == 2); {
-				
+			case "target": 
+				System.out.println("test 2");
 				g.flag();
+				score= score-9;
 				break;
+			default:
+				System.out.println("test 3");
+		
+			//if(test == 1 ) {
+			//	System.out.println("you chose option 1");
+			//	f.flag();
+			//	break;
+		//	}
+			//else if(test == 2); {
+				
+			//	g.flag();
+			//	break;
 			}
+	}
 						
 	}
+	public static void priceRange() {
+		double income;
+		income = 10; 
+		
+		while( income != 0) {
+			Scanner keyboard = new Scanner(System.in);
+			Store1 f = new Store1("walmart","$");
+			Store2 g = new Store2("target","$$");
+
+			
+			System.out.println("pleas enter your monthly income :");
+			income = keyboard.nextDouble();
+		
+			
+
+			
+				if(income < 4500 ) {
+					System.out.println("we recommend that you shop at Walmart");
+					selection();
+					break;
+				}
+				else if(income >= 4500 && income <= 5500) {
+					System.out.println("we recommend that you shop at target");
+					selection();
+					break;
+				}
+			
+			    else {
+					break;
+			    }
+		}
+
+	
 }
 	
 	
