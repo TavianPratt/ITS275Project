@@ -44,7 +44,31 @@ static Scanner keyboard = new Scanner(System.in);
 					 money = money - total;
 					System.out.println("you spent " + total + "and have " + money +"remaining");				
 				}
-			
+				else if(test == 2 ) {
+					total= ((water * tax)+ water);
+					money=money-total;
+					System.out.println("ypu purchased water");
+					System.out.println("you spent " + total + "and have " + money +"remaining");
+				}
+				else if(test == 5 ) {
+					total= ((eggs * tax)+ eggs);
+					money=money-total;
+					System.out.println("you purchased eggs");
+					System.out.println("you spent " + total + "and have " + money +"remaining");
+				}
+				else if(test == 6 ) {
+					total= ((ice cream * tax)+ ice cream);
+					money=money-total;
+					System.out.println("you purchased ice cream");
+					System.out.println("you spent " + total + "and have " + money +"remaining");
+				}
+				else if(test == 7 ) {
+					total= ((laundry detergent * tax)+ laundry detergent);
+					money=money-total;
+					System.out.println("you purchased laundry detergent");
+					System.out.println("you spent " + total + "and have " + money +"remaining");
+				}
+				
 			    else {
 					break;
 			    }
