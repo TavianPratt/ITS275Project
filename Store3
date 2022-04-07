@@ -59,13 +59,13 @@ static Scanner keyboard = new Scanner(System.in);
 				else if(test == 6 ) {
 					total= ((iceCream * tax)+ iceCream);
 					money=money-total;
-					System.out.println("you purchased iceCream");
+					System.out.println("you purchased ice cream");
 					System.out.println("you spent " + total + "and have " + money +"remaining");
 				}
 				else if(test == 7 ) {
 					total= ((laundryDetergent * tax)+ laundryDetergent);
 					money=money-total;
-					System.out.println("you purchased laundryDetergent");
+					System.out.println("you purchased laundry detergent");
 					System.out.println("you spent " + total + "and have " + money +"remaining");
 				}
 				
