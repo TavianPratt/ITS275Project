@@ -47,7 +47,7 @@ static Scanner keyboard = new Scanner(System.in);
 				else if(test == 2 ) {
 					total= ((water * tax)+ water);
 					money=money-total;
-					System.out.println("ypu purchased water");
+					System.out.println("you purchased water");
 					System.out.println("you spent " + total + "and have " + money +"remaining");
 				}
 				else if(test == 5 ) {
