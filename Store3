@@ -11,9 +11,10 @@ import java.util.Scanner;
 		this.name = name;
 		this.price = price;
 	}
-	public void speak() {
-		System.out.println("store name" + name + "price" + price);
+	public void name() {
+		System.out.println("You selected" + name + "and the price range of" + name + "is" + price);
 	}
+	flag();
 	static double test;
 static Scanner keyboard = new Scanner(System.in);
 	public static void item() {
