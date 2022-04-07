@@ -22,8 +22,8 @@ static Scanner keyboard = new Scanner(System.in);
 		double bread = 1.29;
     		double water = 1.65;
    	 	double eggs = 1.32;
-    		double ice cream = 3.84;
-    		double laundry detergent = 9.57;
+    		double iceCream = 3.84;
+    		double laundryDetergent = 9.57;
 		double money = 20;
 		double tax=.07;
 		double test;
@@ -57,15 +57,15 @@ static Scanner keyboard = new Scanner(System.in);
 					System.out.println("you spent " + total + "and have " + money +"remaining");
 				}
 				else if(test == 6 ) {
-					total= ((ice cream * tax)+ ice cream);
+					total= ((iceCream * tax)+ iceCream);
 					money=money-total;
-					System.out.println("you purchased ice cream");
+					System.out.println("you purchased iceCream");
 					System.out.println("you spent " + total + "and have " + money +"remaining");
 				}
 				else if(test == 7 ) {
-					total= ((laundry detergent * tax)+ laundry detergent);
+					total= ((laundryDetergent * tax)+ laundryDetergent);
 					money=money-total;
-					System.out.println("you purchased laundry detergent");
+					System.out.println("you purchased laundryDetergent");
 					System.out.println("you spent " + total + "and have " + money +"remaining");
 				}
 				
