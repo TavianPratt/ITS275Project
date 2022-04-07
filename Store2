@@ -1,11 +1,10 @@
 package oneProject1;
-
-public class NewIts {
-
+import java.util.Scanner;
+public class StoreTwo {
 	public String name;
-	public int price;
+	public String price;
 	
-	public Store2 (String name, int price, String discount) {
+	public Store2 (String name, String price) {
 		this.name = name;
 		this.price = price;
 	}
@@ -26,33 +25,57 @@ static Scanner keyboard = new Scanner(System.in);
 		test = 10; 
 		
 		
-		System.out.println("testing method working 1");
+		System.out.println("enter the amount of money you would like to add to your account:");
 		while( test != 0) {
 			Scanner keyboard = new Scanner(System.in);
 
 			
-			System.out.println("enter test number :");
+			System.out.println("enter the item number you would like to purchase :");
 			test = keyboard.nextDouble();
 		
 			
-				if(test == 1 ) {
-					total= ((bread * tax)+bread);
-					 money = money - total;
-					System.out.println("you spent " + total + "and have " + money +"remaining");				
-				}
+			if(test == 1 ) {
+				total= ((bread * tax)+bread);
+				 money = money - total;
+				 System.out.println("you purchased a loaf of bread");
+				 // change values to only print two decimal places
+				System.out.println( "you spent " + total + "and have " + money +"remaining");				
+			}
+			else if(test == 2 ) {
+				total= ((water * tax)+ water);
+				money=money-total;
+				System.out.println("ypu purchased water");
+				System.out.println("you spent " + total + "and have " + money +"remaining");
+			}
 			
-			    else {
-					break;
-			    }
+			else if(test == 3 ) {
+				total= ((chips * tax)+ chips);
+				money=money-total;
+				System.out.println("ypu purchased chips");
+				System.out.println("you spent " + total + "and have " + money +"remaining");
+			}
+			
+			else if(test == 4 ) {
+				total= ((papertowels * tax)+ papertowels);
+				money=money-total;
+				System.out.println("you purchased papertowels");
+				System.out.println("you spent " + total + "and have " + money +"remaining");
+			}
+		
+		    else {
+		    	
+				break;
+		    }
 		}
-	
 	}
-	public static void flag(){
-		System.out.println("These are the values available for purchase."); 
-		System.out.println ("Please select which item you would like to purchase");
-		System.out.println ("Water= 1,Bread= 2,Chips= 3,Papertowles = 4 ");
-		int item;
-		item = keyboard.nextInt();
+
+		public static void flag(){
+			System.out.println("check the availabilty of the item you would like to purchase.");
+			System.out.println("the items are water = 1 bread = 2 chips = 3 paper towels = 4 eggs = 5 ice cream = 6 laudry detergent = 7 soap = 9 toilet paper = 8");
+			System.out.println("please select which item you would like to purchase");
+			int item;
+			item = keyboard.nextInt();
+
 	
 		int x;
 		
@@ -91,7 +114,6 @@ static Scanner keyboard = new Scanner(System.in);
 			
 				return element;
 		
-	}
 		
 
 	
@@ -99,4 +121,4 @@ static Scanner keyboard = new Scanner(System.in);
 		
 
 }
-
+}
