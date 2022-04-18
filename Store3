@@ -1,84 +1,92 @@
 package project;
 
-public class Store3 {
-
-
-
-package project;
 import java.util.Scanner;
+
+public class Store3 extends Main{
+	public String name;
+	public String price;
+
 	
-	public Store3(String name, int price, String discount) {
+	
+	public Store3(String name, String price) {
 		this.name = name;
 		this.price = price;
+		// TODO Auto-generated constructor stub
 	}
+	
 	public void name() {
-		System.out.println("You selected" + name  + "and the price range of" + name + "is" + price);
+		System.out.println("You selected " + name + " and the price range for this store is " + price);
+		flag();
 	}
-	flag();
 	static double test;
 static Scanner keyboard = new Scanner(System.in);
 	public static void item() {
 		
 		double total;
 		double bread = 1.29;
-    		double water = 1.65;
+    	double water = 1.65;
    	 	double eggs = 1.32;
-    		double iceCream = 3.84;
-    		double laundryDetergent = 9.57;
+    	double icecream = 3.84;
+    	double laundrydetergent = 9.57;
 		double money = 20;
 		double tax=.07;
 		double test;
 		test = 10; 
 		
 		
-		System.out.println("Testing method working 1");
-		while( test != 0) {
+		System.out.println("Enter the amount of money you would like to add to your account: ");
+		money= keyboard.nextDouble();
+		//System.out.println("testing method working 1");
+		while( test != 0) { 
 			Scanner keyboard = new Scanner(System.in);
-
 			
-			System.out.println("Enter test number :");
+			System.out.println("Enter the item number you would like to purchase");
+			System.out.println("or enter the number 0 to finish shopping: ");
 			test = keyboard.nextDouble();
+		
 		
 			
 				if(test == 1 ) {
 					total= ((bread * tax)+bread);
 					 money = money - total;
-					System.out.println("You spent " + total + "and have " + money +"remaining");				
+					System.out.println("you spent " + total + "and have " + money +"remaining");				
 				}
 				else if(test == 2 ) {
 					total= ((water * tax)+ water);
 					money=money-total;
-					System.out.println("You purchased water");
-					System.out.println("You spent " + total + "and have " + money +"remaining");
+					System.out.println("you purchased water");
+					System.out.println("you spent " + total + "and have " + money +"remaining");
 				}
 				else if(test == 5 ) {
 					total= ((eggs * tax)+ eggs);
 					money=money-total;
-					System.out.println("You purchased eggs");
-					System.out.println("You spent " + total + "and have " + money +"remaining");
+					System.out.println("you purchased eggs");
+					System.out.println("you spent " + total + "and have " + money +"remaining");
 				}
 				else if(test == 6 ) {
-					total= ((iceCream * tax)+ iceCream);
+					total= ((icecream * tax)+ icecream);
 					money=money-total;
-					System.out.println("You purchased ice cream");
-					System.out.println("You spent " + total + "and have " + money +"remaining");
+					System.out.println("you purchased ice cream");
+					System.out.println("you spent " + total + "and have " + money +"remaining");
 				}
 				else if(test == 7 ) {
-					total= ((laundryDetergent * tax)+ laundryDetergent);
+					total= ((laundrydetergent * tax)+ laundrydetergent );
 					money=money-total;
-					System.out.println("You purchased laundry detergent");
-					System.out.println("You spent " + total + "and have " + money +"remaining");
+					System.out.println("you purchased laundry detergent");
+					System.out.println("you spent " + total + "and have " + money +"remaining");
 				}
 				
 			    else {
+			    	System.out.println("You have " + money + " remaining in your account. ");
+			    	System.out.println("Thank you for shopping with us.");
 					break;
 			    }
 		}
 	
 	}
-public static void flag(){
-		System.out.println("These are the values available for purchase. Please input a value for the item that you would like to buy. Water= 1, Bread= 2, Eggs= 5, Ice Cream= 6, Laundry Detergent= 7."); 
-		System.out.println("Please select which item you would like to purchase");
+public void flag(){
+		System.out.println("These are the values available for purchase. Please input a value for the item that you would like to buy. Water= 1,Bread= 2,Eggs= 5,Ice Cream= 6, Laundry Detergent= 7."); 
+		System.out.println("please select which item you would like to purchase");
 		int item;
 		item = keyboard.nextInt();
 	
@@ -90,11 +98,12 @@ public static void flag(){
 		int result;
 		 result= sequentialSearch(product, x);
 		 if (result == -1) {
-			 System.out.println("That item is not available");
-			 
+			 System.out.println("that item is not available");
+			 super.selection();
 		 }
 		 else {
-			 System.out.println("That item is available for purchase");
+			 System.out.println("that item is available for purchase");
+			 item();
 		 }
 	}
 	private static int sequentialSearch(int[] product, int i) {
@@ -118,14 +127,11 @@ public static void flag(){
 		}
 			
 				return element;
-		
-	}
 }
 		
-
+	{
 	}
 	
 		
 
-}
 }
