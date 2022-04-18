@@ -1,5 +1,8 @@
 package oneProject1;
 import java.util.Scanner;
+
+//Introducing the StoreTwo class in the grocery store program.
+
 public class StoreTwo {
 		public String name;
 	public String price;
@@ -8,12 +11,17 @@ public class StoreTwo {
 		this.name = name;
 		this.price = price;
 	}
+	
+	//Telling the customer that they selected the name of the item and the program will tell the customer how much the item is to purchase. 
+
 	public void speak() {
 		System.out.println("You selected " + name + "and the price range for this store is " + price);
 	}
 	static double test;
 static Scanner keyboard = new Scanner(System.in);
 	public static void item() {
+	
+		//Assigning items to their corresponding prices that will be used for future calculations.
 		
 		double total;
 		double chips = 3;
@@ -23,27 +31,30 @@ static Scanner keyboard = new Scanner(System.in);
 		double tax=.07;
 		double test;
 		test = 10; 
+		
+		
 		//The person will be asked to insert a value that will correspond to the item that it is assigned to within the specific store that they are shopping at.
 		//This is within a while loop and the program will continue to run until the person is done shopping when typing in 0.
 		//The while loop will also end when the person runs out of money to spend.
-		
 		
 		System.out.println("Enter the amount of money you would like to add to your account:");
 		while( test != 0) {
 			flag();
 		// The person would be able to enter the amount they would like put into their account, to purchase items
 		// If the person does not have enough funds they will be notified
+		
 			Scanner keyboard = new Scanner(System.in);
 
 			
 			System.out.println("Enter the item number you would like to purchase :");
 			test = keyboard.nextDouble();
+			
+			
 		//This is how the price would be calculated if the person were to purchase item 1 which is bread.
 		//The price of bread in an assignment variable is multiplied by the tax variable and the tax will be added to the initial price of bread.
 		//The money total that the person said they would be willing to spend will be subtracted from the item they bought from the store.
 		//Once the calculations are done, the program will tell the person how much they spent and how much money they have left.
 		
-			
 			if(test == 1 ) {
 				total= ((bread * tax)+bread);
 				 money = money - total;
@@ -80,15 +91,16 @@ static Scanner keyboard = new Scanner(System.in);
 	}
 
 		public static void flag(){
-			System.out.println("check the availabilty of the item you would like to purchase.");
-			System.out.println("the items are water = 1 bread = 2 chips = 3 paper towels = 4 eggs = 5 ice cream = 6 laudry detergent = 7 soap = 9 toilet paper = 8");
-			System.out.println("please select which item you would like to purchase");
+			System.out.println("Check the availabilty of the item you would like to purchase.");
+			System.out.println("The items are water = 1 bread = 2 chips = 3 paper towels = 4 eggs = 5 ice cream = 6 laudry detergent = 7 soap = 9 toilet paper = 8");
+			System.out.println("Please select which item you would like to purchase");
 			int item;
 			item = keyboard.nextInt();
+			
 		//The item values are listed below and the item values also correspond with each item.
-		//If the value a person inputs is not within the item list, then the program will tell the person that the item is not available.
+		//If the customer inputs an item that is not on the list of items, then the program will tell the person that the item is not available.
 			// Only certain products will be available at certain stores
-		//If the value a person inputs is within the item list, then the program will tell the person that the item is available.
+		//If the value a person inputs is within the item list, then the program will tell the person that the item is available for purchase.
 	
 		int x;
 		
@@ -105,6 +117,12 @@ static Scanner keyboard = new Scanner(System.in);
 			 System.out.println("that item is available for purchase");
 		 }
 	}
+	
+	//This while statement is searching within the array for the item that the customer requested for purchase. 
+	//If the while statement can not find the item that the customer requested on the list, then the program will tell the customer that the item is not available.
+	//If the while statement can find the item that the customer requested in the program, then the program will tell the customer that the item is available. 
+	//The program saying whether an item is available or not is within the if and else statements above with finding an integer.
+	
 	private static int sequentialSearch(int[] product, int i) {
 		// TODO Auto-generated method stub
 		int index;
