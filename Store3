@@ -1,7 +1,7 @@
 package project;
 
 import java.util.Scanner;
-
+//we are extending the main class so that we can call the methods from within it. 
 public class Store3 extends Main{
 	public String name;
 	public String price;
@@ -13,7 +13,8 @@ public class Store3 extends Main{
 		this.price = price;
 		// TODO Auto-generated constructor stub
 	}
-	
+	// this methods is called from the main class
+		// the name method prints the name and the price range of the store.
 	public void name() {
 		System.out.println("You selected " + name + " and the price range for this store is " + price);
 		flag();
@@ -36,14 +37,17 @@ static Scanner keyboard = new Scanner(System.in);
 		
 		System.out.println("Enter the amount of money you would like to add to your account: ");
 		money= keyboard.nextDouble();
-		//System.out.println("testing method working 1");
+		
 		while( test != 0) { 
 			Scanner keyboard = new Scanner(System.in);
 			
 			System.out.println("Enter the item number you would like to purchase");
 			System.out.println("or enter the number 0 to finish shopping: ");
 			test = keyboard.nextDouble();
-		
+			//This is how the price would be calculated if the person were to purchase item 1 which is bread.
+			//The price of bread in an assignment variable is multiplied by the tax variable and the tax will be added to the initial price of bread.
+			//The money total that the person said they would be willing to spend will be subtracted from the item they bought from the store.
+			//Once the calculations are done, the program will tell the person how much they spent and how much money they have left.
 		
 			
 				if(test == 1 ) {
@@ -89,16 +93,20 @@ public void flag(){
 		System.out.println("please select which item you would like to purchase");
 		int item;
 		item = keyboard.nextInt();
-	
+		//The item values are listed below and the item values also correspond with each item.
+				//If the customer inputs an item that is not on the list of items, then the program will tell the person that the item is not available.
+					// Only certain products will be available at certain stores
+				//If the value a person inputs is within the item list, then the program will tell the person that the item is available for purchase.
 		int x;
 		
 		x=item;
 		
 		int [] product = {1,2,5,6,7};
 		int result;
-		 result= sequentialSearch(product, x);
+		 result= Search(product, x);
 		 if (result == -1) {
 			 System.out.println("that item is not available");
+			 //this super keyword allows us to call the selection method from the main class
 			 super.selection();
 		 }
 		 else {
@@ -106,7 +114,13 @@ public void flag(){
 			 item();
 		 }
 	}
-	private static int sequentialSearch(int[] product, int i) {
+//This while statement is searching within the array for the item that the customer requested for purchase. 
+	//If the while statement can not find the item that the customer requested on the list, then the program will tell the customer that the item is not available.
+	//If the while statement can find the item that the customer requested in the program, then the program will tell the customer that the item is available. 
+	//The program saying whether an item is available or not is within the if and else statements above with finding an integer.
+	
+	
+	private static int Search(int[] product, int i) {
 		// TODO Auto-generated method stub
 		int index;
 		int element;
@@ -135,3 +149,4 @@ public void flag(){
 		
 
 }
+
