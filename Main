@@ -1,57 +1,68 @@
 package project;
 
 import java.util.Scanner;
-
+//main class used for this project 
 public class Main {
 
 	public static void main(String[] args) {
+	//calling this method first so that the recommendation for the user can be made
 		priceRange();
 		}
+	//creating constructors for the three subclasses and giving the attributes of those classes
 public static void selection() {
 	Store1 f = new Store1("walmart","$");
 	Store2 g = new Store2("target","$$");
-	
+	Store3 h = new Store3("publix", "$$$");
+	//creating variable that the user input will be assigned to
 	String test;
 	int score = 9;
-	//test = 10; 
 	
+	 
+	// this loop makes use of the switch case to get the user selection. 
 	while( score != 0) {
 		Scanner keyboard = new Scanner(System.in);
 
 		
-		
+		// the user is asked to enter in  the full name of the store they would ;like to purchase from
 		System.out.println("pick the store you would like to purchase from");
-		System.out.println("walmart would be 1 and target would be 2.");
+		System.out.println("Please type in the name of the store you would like to select.");
 		test = keyboard.nextLine();
+		// once their choice is the method from that subclass is called
+		
 		
 		switch (test ) {
 			case "walmart" :
-				System.out.println("test 1");
-				f.flag();
+				//System.out.println("test 1");
+				f.name();
 				score= score-9;
 				break;
 			case "target": 
-				System.out.println("test 2");
-				g.flag();
+				//System.out.println("test 2");
+				g.name();
+				score= score-9;
+				break;
+			case"publix":
+				//System.out.println("you chose publix");
+				h.name();
 				score= score-9;
 				break;
 			default:
-				System.out.println("test 3");
+				System.out.println("Please check if the item you would like to purchase is at a different store.");
+				selection();
+		}
 		
-			//if(test == 1 ) {
-			//	System.out.println("you chose option 1");
-			//	f.flag();
-			//	break;
-		//	}
-			//else if(test == 2); {
-				
-			//	g.flag();
-			//	break;
+			
+		}
+			
 			}
-	}
+	
 						
-	}
+	
+// this is the method used to make the store recommendation 
 	public static void priceRange() {
+		// this is an example of exception handling like the one from the textbook on page 710.
+		// this makes sure that if the user inputs something besides a double the exception is caught. 
+		try {
 		double income;
 		income = 10; 
 		
@@ -60,13 +71,14 @@ public static void selection() {
 			Store1 f = new Store1("walmart","$");
 			Store2 g = new Store2("target","$$");
 
-			
-			System.out.println("pleas enter your monthly income :");
+			// the input statement gets the users monthly income
+			System.out.println("please enter your monthly income :");
 			income = keyboard.nextDouble();
 		
 			
 
-			
+			// that monthly income is checked against the if conditions to see which store would be best 
+			//each option then calls the selection method 
 				if(income < 4500 ) {
 					System.out.println("we recommend that you shop at Walmart");
 					selection();
@@ -77,12 +89,23 @@ public static void selection() {
 					selection();
 					break;
 				}
+				else if(income >= 5500) {
+					System.out.println("we recommend that you shop at publix");
+					selection();
+					break;
+				}
 			
 			    else {
 					break;
 			    }
 		}
-
+		}
+		//if there is and exception that is caught the program will ask the user to make sure they are typing the correct input type. 
+		catch(Exception e) {
+			System.out.println("please make sure to type in a number for the monthly income");
+			priceRange();
+		}
+		
 	
 }
 	
